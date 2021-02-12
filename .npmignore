@@ -1,0 +1,11 @@
+node_modules/
+.vscode/
+.idea/
+npm-debug.log
+android/
+ios/
+App.js
+app.json
+.watchmanconfig
+.buckconfig
+.git

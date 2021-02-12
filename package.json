@@ -1,0 +1,96 @@
+{
+  "name": "@platformbuilders/react-native-masked-text",
+  "version": "1.0.0",
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://www.opensource.org/licenses/mit-license.php"
+    }
+  ],
+  "license": "ISC",
+  "description": "",
+  "author": "Platform Builders <apps@platformbuilders.io>",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/platformbuilders/react-native-masked-text.git"
+  },
+  "bugs": {
+    "url": "https://github.com/platformbuilders/react-native-masked-text/issues"
+  },
+  "homepage": "https://github.com/platformbuilders/react-native-masked-text#readme",
+  "keywords": [
+    "mask",
+    "text",
+    "textinput",
+    "react-native",
+    "custom",
+    "money"
+  ],
+  "main": "./dist/rnmt.js",
+  "module": "dist/index.es.js",
+  "types": "dist/index.d.ts",
+  "engines": {
+    "node": ">=8",
+    "npm": ">=5"
+  },
+  "scripts": {
+    "clean": "rimraf dist",
+    "test": "jest",
+    "test:watch": "react-scripts test --env=jsdom",
+    "build": "babel ./rnmt.js ./lib/*.js ./lib/**/*.js -d ./dist",
+    "prepublish": "npm test && npm run clean && npm run build",
+    "start": "rollup -c -w",
+    "pretty": "prettier --config ./.prettierrc.js --write \"lib/**/*.{js,jsx,ts,tsx,json}\"",
+    "lint": "tsc && eslint 'lib/**/*.{js, ts, tsx}' --fix"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged",
+      "pre-push": "lint-staged",
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
+  "lint-staged": {
+    "**/*.ts?(x)": [
+      "yarn pretty",
+      "yarn lint",
+      "git add ."
+    ]
+  },
+  "dependencies": {
+    "date-and-time": "0.9.0",
+    "tinymask": "1.0.2"
+  },
+  "devDependencies": {
+    "@types/react": "*",
+    "@types/react-native": "*",
+    "@typescript-eslint/eslint-plugin": "^4.15.0",
+    "@typescript-eslint/parser": "^4.15.0",
+    "babel-cli": "6.26.0",
+    "babel-eslint": "^10.1.0",
+    "babel-jest": "23.4.2",
+    "babel-preset-react-native": "4.0.0",
+    "eslint": "^7.19.0",
+    "eslint-config-airbnb": "^18.2.1",
+    "eslint-config-prettier": "^7.2.0",
+    "eslint-plugin-flowtype": "^5.2.0",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-jsx-a11y": "^6.4.1",
+    "eslint-plugin-prettier": "^3.3.1",
+    "eslint-plugin-promise": "^4.3.1",
+    "eslint-plugin-react": "^7.22.0",
+    "eslint-plugin-sonarjs": "^0.5.0",
+    "eslint-plugin-typescript": "^0.14.0",
+    "jest": "23.5.0",
+    "prettier": "^2.2.1",
+    "react": "16.3.1",
+    "react-native": "0.55.4",
+    "react-native-masked-text": "1.9.0",
+    "react-test-renderer": "16.3.1",
+    "rimraf": "2.6.2",
+    "typescript": "^4.1.5"
+  },
+  "jest": {
+    "preset": "react-native"
+  }
+}
