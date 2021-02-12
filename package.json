@@ -58,7 +58,7 @@
     ]
   },
   "dependencies": {
-    "date-and-time": "0.9.0",
+    "date-and-time": "0.14.2",
     "tinymask": "1.0.2"
   },
   "devDependencies": {
