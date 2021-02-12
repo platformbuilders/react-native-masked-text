@@ -1,0 +1,92 @@
+{
+  "name": "@platformbuilders/react-native-masked-text",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  },
+  "version": "1.0.0",
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://www.opensource.org/licenses/mit-license.php"
+    }
+  ],
+  "license": "ISC",
+  "description": "",
+  "author": "Platform Builders <apps@platformbuilders.io>",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/platformbuilders/react-native-masked-text.git"
+  },
+  "bugs": {
+    "url": "https://github.com/platformbuilders/react-native-masked-text/issues"
+  },
+  "homepage": "https://github.com/platformbuilders/react-native-masked-text#readme",
+  "keywords": [
+    "mask",
+    "text",
+    "textinput",
+    "react-native",
+    "custom",
+    "money"
+  ],
+  "main": "./dist/rnmt.js",
+  "module": "dist/index.es.js",
+  "types": "dist/index.d.ts",
+  "engines": {
+    "node": ">=8",
+    "npm": ">=5"
+  },
+  "private": false,
+  "scripts": {
+    "clean": "rimraf dist",
+    "test": "jest",
+    "test:watch": "react-scripts test --env=jsdom",
+    "build": "babel ./rnmt.js ./lib/*.js ./lib/**/*.js -d ./dist",
+    "prepublish": "npm run clean && npm run build",
+    "start": "rollup -c -w",
+    "pretty": "prettier --config ./.prettierrc.js --write \"lib/**/*.{js,jsx,ts,tsx,json}\"",
+    "postinstall": "husky install",
+    "prepublishOnly": "pinst --disable",
+    "postpublish": "pinst --enable"
+  },
+  "dependencies": {
+    "date-and-time": "0.14.2",
+    "tinymask": "1.0.2"
+  },
+  "peerDependencies": {
+    "react": ">=16.13.0",
+    "react-native": ">=0.63.2"
+  },
+  "devDependencies": {
+    "@types/react": "17.0.2",
+    "@types/react-native": "0.63.48",
+    "@typescript-eslint/eslint-plugin": "^4.15.0",
+    "@typescript-eslint/parser": "^4.15.0",
+    "babel-cli": "6.26.0",
+    "babel-eslint": "^10.1.0",
+    "babel-jest": "26.6.3",
+    "babel-preset-react-native": "4.0.1",
+    "eslint": "^7.19.0",
+    "eslint-config-airbnb": "^18.2.1",
+    "eslint-config-prettier": "^7.2.0",
+    "eslint-plugin-flowtype": "^5.2.0",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-jsx-a11y": "^6.4.1",
+    "eslint-plugin-prettier": "^3.3.1",
+    "eslint-plugin-promise": "^4.3.1",
+    "eslint-plugin-react": "^7.22.0",
+    "eslint-plugin-sonarjs": "^0.5.0",
+    "eslint-plugin-typescript": "^0.14.0",
+    "husky": "5.0.9",
+    "jest": "26.6.3",
+    "pinst": "^2.1.4",
+    "prettier": "^2.2.1",
+    "react-native-masked-text": "1.13.0",
+    "react-test-renderer": "17.0.1",
+    "rimraf": "3.0.2",
+    "typescript": "^4.1.5"
+  },
+  "jest": {
+    "preset": "react-native"
+  }
+}
