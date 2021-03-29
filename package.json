@@ -53,9 +53,9 @@
     "tinymask": "1.0.2"
   },
   "peerDependencies": {
+    "date-and-time": "^0.14.2",
     "react": ">=16.13.0",
-    "react-native": ">=0.63.2",
-    "date-and-time": "^0.14.2"
+    "react-native": ">=0.63.2"
   },
   "devDependencies": {
     "@types/react": "17.0.2",
