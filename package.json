@@ -40,13 +40,9 @@
   "scripts": {
     "clean": "rimraf dist",
     "test": "jest",
-    "test:watch": "react-scripts test --env=jsdom",
     "build": "babel ./rnmt.js ./lib/*.js ./lib/**/*.js -d ./dist",
-    "prepublish": "npm run clean && npm run build",
     "start": "rollup -c -w",
-    "pretty": "prettier --config ./.prettierrc.js --write \"lib/**/*.{js,jsx,ts,tsx,json}\"",
-    "prepublishOnly": "pinst --disable",
-    "postpublish": "pinst --enable"
+    "pretty": "prettier --config ./.prettierrc.js --write \"lib/**/*.{js,jsx,ts,tsx,json}\""
   },
   "dependencies": {
     "tinymask": "1.0.2",
