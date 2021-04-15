@@ -3,7 +3,7 @@
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/"
   },
-  "version": "1.0.1",
+  "version": "1.0.2",
   "licenses": [
     {
       "type": "MIT",
@@ -45,47 +45,43 @@
     "prepublish": "npm run clean && npm run build",
     "start": "rollup -c -w",
     "pretty": "prettier --config ./.prettierrc.js --write \"lib/**/*.{js,jsx,ts,tsx,json}\"",
-    "postinstall": "husky install",
     "prepublishOnly": "pinst --disable",
     "postpublish": "pinst --enable"
   },
   "dependencies": {
-    "tinymask": "1.0.2"
+    "tinymask": "1.0.2",
+    "date-and-time": "^1.0.0"
   },
   "peerDependencies": {
-    "react": ">=16.13.0",
-    "react-native": ">=0.63.2",
-    "date-and-time": "^0.14.2"
+    "react": ">=16.8.6",
+    "react-native": ">=0.60.0"
   },
   "devDependencies": {
-    "@types/react": "17.0.2",
-    "@types/react-native": "0.63.48",
-    "@typescript-eslint/eslint-plugin": "^4.15.0",
-    "@typescript-eslint/parser": "^4.15.0",
+    "@types/react": "17.0.3",
+    "@types/react-native": "0.64.2",
+    "@typescript-eslint/eslint-plugin": "^4.22.0",
+    "@typescript-eslint/parser": "^4.22.0",
     "babel-cli": "6.26.0",
     "babel-eslint": "^10.1.0",
     "babel-jest": "26.6.3",
     "babel-preset-react-native": "4.0.1",
-    "eslint": "^7.19.0",
+    "eslint": "^7.24.0",
     "eslint-config-airbnb": "^18.2.1",
-    "eslint-config-prettier": "^7.2.0",
-    "eslint-plugin-flowtype": "^5.2.0",
+    "eslint-config-prettier": "^8.2.0",
+    "eslint-plugin-flowtype": "^5.7.0",
     "eslint-plugin-import": "^2.22.1",
     "eslint-plugin-jsx-a11y": "^6.4.1",
-    "eslint-plugin-prettier": "^3.3.1",
-    "eslint-plugin-promise": "^4.3.1",
-    "eslint-plugin-react": "^7.22.0",
-    "eslint-plugin-sonarjs": "^0.5.0",
+    "eslint-plugin-prettier": "^3.4.0",
+    "eslint-plugin-promise": "^5.1.0",
+    "eslint-plugin-react": "^7.23.2",
+    "eslint-plugin-sonarjs": "^0.6.0",
     "eslint-plugin-typescript": "^0.14.0",
-    "husky": "5.0.9",
     "jest": "26.6.3",
-    "pinst": "^2.1.4",
+    "pinst": "^2.1.6",
     "prettier": "^2.2.1",
-    "react-native": "^0.64.0",
-    "react-native-masked-text": "1.13.0",
-    "react-test-renderer": "17.0.1",
+    "react-test-renderer": "17.0.2",
     "rimraf": "3.0.2",
-    "typescript": "^4.1.5"
+    "typescript": "^4.2.4"
   },
   "jest": {
     "preset": "react-native"
