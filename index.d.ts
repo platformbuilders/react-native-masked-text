@@ -23,6 +23,7 @@ export type TextInputMaskTypeProp =
     | 'no-mask'
     | 'custom'
     | 'account-bank'
+    | 'uppercase'
 
 // Option prop of TextInputMask.
 export interface TextInputMaskOptionProp {
