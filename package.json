@@ -3,7 +3,7 @@
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/"
   },
-  "version": "1.0.2",
+  "version": "1.0.3",
   "licenses": [
     {
       "type": "MIT",
@@ -45,7 +45,7 @@
     "prepublish": "npm run clean && npm run build",
     "start": "rollup -c -w",
     "pretty": "prettier --config ./.prettierrc.js --write \"lib/**/*.{js,jsx,ts,tsx,json}\"",
-    "postinstall": "husky install",
+    "prepareinstall": "husky install",
     "prepublishOnly": "pinst --disable",
     "postpublish": "pinst --enable"
   },
