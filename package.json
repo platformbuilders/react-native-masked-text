@@ -50,7 +50,7 @@
     "postpublish": "pinst --enable"
   },
   "dependencies": {
-    "date-and-time": "0.14.2",
+    "date-and-time": "1.0.0",
     "tinymask": "1.0.2"
   },
   "peerDependencies": {
