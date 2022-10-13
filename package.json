@@ -1,8 +1,5 @@
 {
   "name": "@platformbuilders/react-native-masked-text",
-  "publishConfig": {
-    "registry": "https://npm.pkg.github.com/"
-  },
   "version": "1.0.6",
   "licenses": [
     {
