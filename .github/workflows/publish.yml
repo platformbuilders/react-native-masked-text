@@ -7,7 +7,7 @@ on:
 jobs:
   publish:
     runs-on: ubuntu-latest
-    name: Publish to npm
+    name: Publish to Github Packages
     steps:
       - uses: actions/checkout@v2
       # Setup .npmrc file to publish to npm
@@ -24,6 +24,18 @@ jobs:
           registry-url: 'https://npm.pkg.github.com'
           scope: '@platformbuilders'
       # Publish to GitHub Packages
-      - run: npm publish --access public
+      - run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+  publish_npm:
+    runs-on: ubuntu-latest
+    name: Publish to NPM
+    steps:
+      - uses: actions/setup-node@v2
+        with:
+          node-version: 16
+          registry-url: 'https://registry.npmjs.org/'
+      - name: Install
+        run: yarn install
+      # Publish to NPM
+      - run: npm publish --access public
